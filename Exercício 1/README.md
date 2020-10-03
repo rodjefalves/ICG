@@ -31,5 +31,8 @@ Foi feito um teste inicial a tentativa de executar o programa na IDE [Code::Bloc
 
 ## Conclusão
 
-Não foram encontradas grandes dificuldades na instalação e execução do programa da reprodução em tela do triângulo colorido, dessa maneira, atingido o resultado previsto, não foi necessária a configuração da IDE anteriormente mencionada.
+Não foram encontradas grandes dificuldades na instalação e execução da reprodução em tela do triângulo colorido, porém, ao executar na IDE anteriormente citada, foram encontrados problemas, todos por não reconhecia as libs, como pode ser observado na figura abaixo:
 
+![Erros](https://jeferson-wwe.000webhostapp.com/img-icg/erro.png)
+
+ Visto que na utilização do terminal foi atingido o resultado previsto na atividade: aparecer na tela o triângulo colorido, não foi necessária a configuração da IDE anteriormente mencionada.
