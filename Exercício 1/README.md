@@ -27,7 +27,7 @@ Foi feito um teste inicial a tentativa de executar o programa na IDE [Code::Bloc
 
 **O resultado pode ser conferido no gif abaixo:**
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Execução do programa](https://jeferson-wwe.000webhostapp.com/img-icg/execucao.gif)
 
 ## Conclusão
 
