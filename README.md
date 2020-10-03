@@ -1,1 +1,2 @@
-# ICG
+# Neste repositório, estão todas as atividades da disciplina Introdução à Computação Gráfica.
+## Cada exercício será uma pasta e dentro dela existirá um READ.md com a descrição da tarefa, imagens, gifs e o que for necessário para melhor entendimento... 
