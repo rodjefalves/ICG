@@ -25,5 +25,11 @@ Foi feito um teste inicial a tentativa de executar o programa na IDE [Code::Bloc
 
 > ./exercicio-hello-world
 
-**__O resultado pode ser conferido no gif abaixo:__**
+**O resultado pode ser conferido no gif abaixo:**
+
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+
+## Conclusão
+
+Não foram encontradas grandes dificuldades na instalação e execução do programa da reprodução em tela do triângulo colorido, dessa maneira, atingido o resultado previsto, não foi necessária a configuração da IDE anteriormente mencionada.
 
