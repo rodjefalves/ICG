@@ -26,5 +26,34 @@ O offset é útil pois ele define em que posição do color buffer irá se local
 
 ![Cor RGBA e Offset](https://jeferson-wwe.000webhostapp.com/img-icg/razaoOffset.png)
 
+O código da função ficou assim:
+
+ˋˋˋ
+// Função para rasterizar ponto em tela
+void PutPixel (int x, int y, Cores cores)  {
+
+    fb_ptr[(x*4 + y*4*IMAGE_WIDTH) + 0] = cores.red;
+    fb_ptr[(x*4 + y*4*IMAGE_WIDTH) + 1] = cores.green;
+    fb_ptr[(x*4 + y*4*IMAGE_WIDTH) + 2] = cores.blue;
+    fb_ptr[(x*4 + y*4*IMAGE_WIDTH) + 3] = cores.alpha;
+
+}
+
+ ˋˋˋ
+
+![Exemplos de pixels](https://jeferson-wwe.000webhostapp.com/img-icg/pixels.png)
+
 ## A função DrawLine
 
+
+
+![Exemplos de linhas](https://jeferson-wwe.000webhostapp.com/img-icg/linhas.png)
+
+
+## A função DrawTriangule
+
+![Triângulo com três linhas](https://jeferson-wwe.000webhostapp.com/img-icg/triangulo1.png)
+
+
+
+![Triângulo com DrawTriangule](https://jeferson-wwe.000webhostapp.com/img-icg/triangulo2.png)
