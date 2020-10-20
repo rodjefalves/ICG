@@ -28,14 +28,9 @@ O offset é útil pois ele define em que posição do color buffer irá se local
 
 O código da função ficou assim:
 
-ˋˋˋvoid PutPixel (int x, int y, Cores cores)  {
-
-    fb_ptr[(x*4 + y*4*IMAGE_WIDTH) + 0] = cores.red;
-    fb_ptr[(x*4 + y*4*IMAGE_WIDTH) + 1] = cores.green;
-    fb_ptr[(x*4 + y*4*IMAGE_WIDTH) + 2] = cores.blue;
-    fb_ptr[(x*4 + y*4*IMAGE_WIDTH) + 3] = cores.alpha;
-
-}ˋˋˋ
+ˋˋˋ
+Esta é uma linha de código
+ ˋˋˋ
 
 ![Exemplos de pixels](https://jeferson-wwe.000webhostapp.com/img-icg/pixels.png)
 
