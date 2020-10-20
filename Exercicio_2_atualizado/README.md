@@ -3,13 +3,14 @@
 ## Integrantes da dupla:
 
 **Jeferson Alves Rodrigues**
+
 **Viviane Cristine Alves**
 
 ## Sobre a atividade
 
-	Esta atividade tem como objetivo principal levar o discente a entender como funciona algoritmos de rasterização e implementar funções para rasterizar pixels, linhas e triângulos. A rasterização foi feita simulando acesso direto a memória de vídeo por meio de um framework que o próprio professor desenvolveu e disponibilizou. Nesse framework existe um ponteiro, o fb_ptr, que aponta para o primeiro byte do color buffer e é essencial para a realização desta atividade.
+Esta atividade tem como objetivo principal levar o discente a entender como funciona algoritmos de rasterização e implementar funções para rasterizar pixels, linhas e triângulos. A rasterização foi feita simulando acesso direto a memória de vídeo por meio de um framework que o próprio professor desenvolveu e disponibilizou. Nesse framework existe um ponteiro, o fb_ptr, que aponta para o primeiro byte do color buffer e é essencial para a realização desta atividade.
 
-	Foram alterados os arquivos arquivos mygl.h e mygl.c. Sendo o mygl.h o local onde contém as funções que efetuaram a rasterização de  pixel (PutPixel), de linha (DrawLine) e de triângulo (DrawTriangule).
+Foram alterados os arquivos arquivos mygl.h e mygl.c. Sendo o mygl.h o local onde contém as funções que efetuaram a rasterização de  pixel (PutPixel), de linha (DrawLine) e de triângulo (DrawTriangule).
 
 ## A função PutPixel
 
