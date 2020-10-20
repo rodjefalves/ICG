@@ -38,8 +38,7 @@ void PutPixel (int x, int y, Cores cores)  {
     fb_ptr[(x*4 + y*4*IMAGE_WIDTH) + 3] = cores.alpha;
 
 }
-
- ˋˋˋ
+ˋˋˋ
 
 ![Exemplos de pixels](https://jeferson-wwe.000webhostapp.com/img-icg/pixels.png)
 
