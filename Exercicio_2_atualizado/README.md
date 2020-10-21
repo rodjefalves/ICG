@@ -20,11 +20,11 @@ Para rasterizar um ponto, ou seja, um pixel foi necessário desenvolver a funç�
 
 Outro material importante para o desenvolvimento do algoritmo se encontra na mesma aula e é o conceito de offset e seu cálculo. Foi a partir desse referencial que desenvolvemos a função que resteriza pixels. O offset pode ser observado abaixo:
 
-![Offset](https://jeferson-wwe.000webhostapp.com/img-icg/offset.png)
+![Offset](https://jeferson-wwe.000webhostapp.com/img-icg/offset1.png)
 
 O offset é útil pois ele define em que posição do color buffer irá se localizar cada pixel e está intimamente ligado aos 4 bytes que representam uma cor (RGBA), como demosntrado abaixo:
 
-![Cor RGBA e Offset](https://jeferson-wwe.000webhostapp.com/img-icg/razaoOffset.png)
+![Cor RGBA e Offset](https://jeferson-wwe.000webhostapp.com/img-icg/razaoOffset1.png)
 
 O código da função ficou assim:
 
@@ -36,7 +36,6 @@ void PutPixel (int x, int y, Cores cores)  {
     fb_ptr[(x*4 + y*4*IMAGE_WIDTH) + 1] = cores.green;
     fb_ptr[(x*4 + y*4*IMAGE_WIDTH) + 2] = cores.blue;
     fb_ptr[(x*4 + y*4*IMAGE_WIDTH) + 3] = cores.alpha;
-
 }
 ~~~
 
