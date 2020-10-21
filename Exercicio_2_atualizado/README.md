@@ -104,6 +104,7 @@ void DrawTriangule(int x0, int y0, int x1, int y1, int x2, int y2, Cores corV1, 
     DrawLine(x0,y0,x1,y1, corV1);
     DrawLine(x1,y1,x2,y2, corV2);
     DrawLine(x2,y2,x1,y1, corV3);
+
 }
 ~~~
 
