@@ -11,11 +11,16 @@ void MyGlDraw(void) {
     // >>> Chame aqui as funções que você implementou <<<
     //
     
-    PutPixel(0, 0, vermelho);
+    //PutPixel(300, 300, vermelho);
 
-    //DrawLine(200,100,500,100, vermelho);
-    //DrawLine(500,100,350,300, azul);
-    //DrawLine(350,300,200,100, verde);
+    //PutPixel(300, 350, azul);
 
-    //DrawTriangule(200,100,500,100,350,300, vermelho, azul, verde);
+    //PutPixel(300, 250, verde);
+
+    //DrawLine(100,100,200,500, vermelho);
+    //DrawLine(150,50,500,50, azul);
+    //DrawLine(400,100,200,300, verde);
+
+    DrawTriangule(200,100,500,100,350,300, vermelho, verde, azul);
+
 }
