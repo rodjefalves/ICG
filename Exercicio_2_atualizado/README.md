@@ -109,7 +109,7 @@ void DrawTriangule(int x0, int y0, int x1, int y1, int x2, int y2, Cores corV1, 
 
 Porém, ao rasterizar um triângulo com os mesmos valores de vértices, com a DrawTriangule, tivemos uma surpresa:
 
-![Triângulo com DrawTriangule](https://jeferson-wwe.000webhostapp.com/img-icg/triangulo2.png)
+![Triângulo com DrawTriangule](https://jeferson-wwe.000webhostapp.com/img-icg/triangulo3.png)
 
 Até a presente data, da conclusão do prazo, não conseguimos descobrir qual o problema da lógica, provavelmente foi algo durante a adaptação para os demais octantes.
 
