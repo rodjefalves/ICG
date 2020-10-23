@@ -83,6 +83,53 @@ void DrawLine(int x0, int y0, int x1, int y1) {
 
 **Observação:** a versão completa pode ser vista no arquivo **mygl.h** com as devidas adaptações para os demais octantes.
 
+## Interpolação de cores
+
+Uma das etapas mais difíceis foi a interpolação de cores. A princípio pensamos em utilizar um for para ir mudando os valores da primeira a segunda cor, mudando seus valores RGBA e isso até deu certo, porém somente se tivessemos controle da quantidade de pixel que seria rasterizado não formação de linhas então descartamos essa solução. Com nossas pesquisas descobrimos um algoritmo de interpolação de cores que usa distância de pontos.
+
+O algoritmo pode ser observado abaixo:
+
+~~~Código em C
+//Interpolação das cores
+Cores coresInterpoladas (float p, Cores c1, Cores c2) {
+    Cores cores;
+    cores.red = c1.red*p + (1-p)*c2.red;
+    cores.green = c1.green*p + (1-p)*c2.green;
+    cores.blue = c1.blue*p + (1-p)*c2.blue;
+    cores.alpha = c1.alpha*p + (1-p)*c2.alpha;
+    return cores;
+        
+}
+
+//calculo da distancia dos pontos (total)
+float distanciaPontos(int x0, int y0, int x1, int y1){
+    //a distancia entre pontos eh uma raiz quadrada
+    float valorDist;
+
+    if (x1 == x0)
+    {
+        valorDist = y1 - y0;
+    }
+    else if (y1 == y0)
+    {
+        valorDist = x1 - x0;
+    } else
+    {
+        valorDist = raizQuadrada((x1-x0)*(x1-x0)*(y1-y0)*(y1-y0));
+    }
+    return valorDist;
+}
+~~~
+
+E para esses códigos funcionarem, é preciso chamar em cada octante com os seguintes códigos:
+
+~~~
+distP = distanciaPontos(x0, y0, x1, y1);
+color = coresInterpoladas(distP/distTotal,cor1,cor2);
+~~~
+
+![Linhas Interpoladas](https://jeferson-wwe.000webhostapp.com/img-icg/linhasInterpoladas.png)
+
 ## A função DrawTriangule
 
 Para rasterizar um triângulo fizemos, antes da função um teste de lógica. Rasterizamos 3 linhas, contendo ao total 3 vértices nomeados de: 
@@ -91,7 +138,7 @@ V1 = (x0,y0)
 V2 = (x1, y1)
 V3 = (x2, y2)
 
-Sendo a primeira reta formada pelos V1 e V2, a segunda pelo V2 e V3 e a terceira por V3 e V1. Colocamos valores nesses pares ordenados e gerou o seguinte triângulo:
+Sendo a primeira reta formada pelos V1 e V2, a segunda pelo V2 e V3 e a terceira por V3 e V1. Colocamos valores nesses pares ordenados, com cores para cada uma das retas para facilitar a visualização e geramos o seguinte triângulo:
 
 ![Triângulo com três linhas](https://jeferson-wwe.000webhostapp.com/img-icg/triangulo1.png)
 
@@ -102,21 +149,19 @@ Comprovada a lógica que três retas formariam um triângulo, implementamos a fu
 void DrawTriangule(int x0, int y0, int x1, int y1, int x2, int y2, Cores corV1, Cores corV2, Cores corV3) {
     DrawLine(x0,y0,x1,y1, corV1);
     DrawLine(x1,y1,x2,y2, corV2);
-    DrawLine(x2,y2,x1,y1, corV3);
+    DrawLine(x2,y2,x0,y0, corV3);
 
 }
 ~~~
 
-Porém, ao rasterizar um triângulo com os mesmos valores de vértices, com a DrawTriangule, tivemos uma surpresa:
+Rasterização de um triângulo com os mesmos valores de vértices, com a DrawTriangule e a interpolação de cores, tivemos uma surpresa:
 
-![Triângulo com DrawTriangule](https://jeferson-wwe.000webhostapp.com/img-icg/triangulo3.png)
-
-Até a presente data, da conclusão do prazo, não conseguimos descobrir qual o problema da lógica, provavelmente foi algo durante a adaptação para os demais octantes.
+![Triângulo Interpolado](https://jeferson-wwe.000webhostapp.com/img-icg/trianguloInterpolado.png)
 
 ## Dificuldades encontradas
 
-1. Conseguimos interpolar cores em linhas simuladas com **for** contudo não conseguimos incluir essa função nas linhas do algoritmo do ponto médio;
-2. Tivemos problema na rasterização de triângulos com a função DrawTriangule e não conseguimos identificar a tempo qual a origem deste problema.
+1. A primeira dificuldade encontrada foi generalizar o algoritmo para os todos os octantes, então fizemos a análise de quais similaridades existiam entre os 8 e como generalizar o algoritmo do ponto médio;
+2. Na interpolação de cores o algoritmo utilizado não funcionava para retas verticais e horizontais, pois utilizamos a distância de pontos, que utiliza raiz quadrada e sempre que a raiz dava zero (devido aos x ou y finais e iniciais serem iguais), a função de interpolação não retornava nada. Contudo, a resolução foi simples, visto que se as retas forem paralelas aos eixos, substitui-se a raiz quadrada por uma simples subtração, de acordo com o eixo cujo a reta é paralela.
 
 ## Referências
 

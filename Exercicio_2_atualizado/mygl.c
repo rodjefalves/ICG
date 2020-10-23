@@ -29,7 +29,20 @@ Cores coresInterpoladas (float p, Cores c1, Cores c2) {
 //calculo da distancia dos pontos (total)
 float distanciaPontos(int x0, int y0, int x1, int y1){
     //a distancia entre pontos eh uma raiz quadrada
-    return raizQuadrada((x1-x0)*(x1-x0)*(y1-y0)*(y1-y0));
+    float valorDist;
+
+    if (x1 == x0)
+    {
+        valorDist = y1 - y0;
+    }
+    else if (y1 == y0)
+    {
+        valorDist = x1 - x0;
+    } else
+    {
+        valorDist = raizQuadrada((x1-x0)*(x1-x0)*(y1-y0)*(y1-y0));
+    }
+    return valorDist;
 }
 
 //implementacao da raiz quadrada
@@ -83,9 +96,10 @@ void DrawLine(int x0, int y0, int x1, int y1, Cores cor1, Cores cor2){
 
     Cores color = cor1;
     PutPixel(x0, y0, cor1);
-    //Octantes 1 e 5
+    //Octantes 1 e 5z
     if (abs(dx) >= abs(dy) && dy >= 0)
     {
+        
         dec = 2 * dy - dx;
         dL = 2 * dy;
         dNE = 2 * (dy - dx);
@@ -115,6 +129,7 @@ void DrawLine(int x0, int y0, int x1, int y1, Cores cor1, Cores cor2){
     //Octantes 2 e 6
     if (abs(dy) > abs(dx) && dy >= 0)
     {
+        
         dec = 2 * dx - dy;
         dL = 2 * dx;
         dNE = 2 * (dx - dy);
@@ -141,6 +156,7 @@ void DrawLine(int x0, int y0, int x1, int y1, Cores cor1, Cores cor2){
     // Octantes 3 e 7
     if (abs(dy) > abs(dx) && dy <= 0)
     {
+        
         dec = 2 * dx + dy;
         dL = 2 * dx;
         dNE = 2 * (dx + dy);
@@ -167,6 +183,7 @@ void DrawLine(int x0, int y0, int x1, int y1, Cores cor1, Cores cor2){
     //Octantes 4 e 8
     if (abs(dx) >= abs(dy) && dy <= 0)
     {
+        
         dec = -2 * dy - dx;
         dL = -2 * dy;
         dNE = 2 * (-dy - dx);
@@ -217,16 +234,15 @@ void MyGlDraw(void) {
     //PutPixel(300, 350, azul);
     //PutPixel(300, 250, verde);
 
-    /* linhas 
-    DrawLine(100,100,200,500, cor1,cor2);
-    DrawLine(150,50,500,50, cor1,cor2);
-    DrawLine(400,100,200,300, cor2,cor1);
-*/
+    
+    //DrawLine(100,100,200,500, cor1,cor2);
+    //DrawLine(150,50,500,50, cor1,cor2);
+    //DrawLine(400,100,200,300, cor2,cor1);
     
 
      
-    //DrawTriangule(200,100,500,100,350,300, cor1, cor2);
-    DrawLine(100, 256, 400, 256, cor1, cor2);
-
+    DrawTriangule(200,100,500,100,350,300, cor1, cor2);
+    //DrawLine(100, 256, 400, 256, cor1, cor2);
+    //DrawLine(100,100,200,500, cor1,cor2);
 
 }
