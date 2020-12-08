@@ -73,7 +73,7 @@ Os valores utilizados para esse exercício foram: posição da câmera = (0.3, 0
 
 ### 1º Passo: modificar matriz projection
 
-![Exercício 5 - Código 1](https://github.com/rodjefalves/ICG/blob/main/Imagens/transflivre1cod.jpeg)
+![Exercício 5 - Código 1](https://github.com/rodjefalves/ICG/blob/main/Imagens/transflivre1cod.png)
 
 Esse código gerou a seguinte imagem:
 
@@ -81,7 +81,7 @@ Esse código gerou a seguinte imagem:
 
 ### 2º Passo: modificar matriz model
 
-![Exercício 5 - Código 2](https://github.com/rodjefalves/ICG/blob/main/Imagens/transflivre2cod.jpeg)
+![Exercício 5 - Código 2](https://github.com/rodjefalves/ICG/blob/main/Imagens/transflivre2cod.png)
 
 Esse código gerou a seguinte imagem:
 
@@ -89,7 +89,7 @@ Esse código gerou a seguinte imagem:
 
 ### 3º Passo: modificar matriz view
 
-![Exercício 5 - Código 3](https://github.com/rodjefalves/ICG/blob/main/Imagens/transflivre3cod.jpeg)
+![Exercício 5 - Código 3](https://github.com/rodjefalves/ICG/blob/main/Imagens/transflivre3cod.png)
 
 Esse código gerou a seguinte imagem:
 
