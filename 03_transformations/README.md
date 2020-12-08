@@ -89,8 +89,8 @@ Esse código gerou a seguinte imagem:
 
 ### 3º Passo: modificar matriz view
 
-![Exercício 5 - Código 3](https://github.com/rodjefalves/ICG/blob/main/Imagens/transflivre3cod.png)
+![Exercício 5 - Código 3](https://github.com/rodjefalves/ICG/blob/main/Imagens/transflivre3cod.png.png)
 
 Esse código gerou a seguinte imagem:
 
-![Exercício 5 - Passo 3](https://github.com/rodjefalves/ICG/blob/main/Imagens/transflivre3.jpeg)
+![Exercício 5 - Passo 3](https://github.com/rodjefalves/ICG/blob/main/Imagens/transflivre3.png)
